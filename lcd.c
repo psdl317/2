@@ -32,7 +32,7 @@ void SendData(unsigned char LcdData) {
 
 void initLCD(void) {
     ADCON1 = 0x0F;         // Configure all pins as digital
-    TRISB = 0x00;          // LCD data port as output
+    TRISB = 0x00;          
     TRISAbits.TRISA0 = 0;  // RS pin as output
     TRISAbits.TRISA1 = 0;  // EN pin as output
 
