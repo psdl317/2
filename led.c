@@ -2,7 +2,7 @@
 
 // CONFIGURATION BITS (important!)
 #pragma config FOSC = INTOSCIO_EC  // Internal Oscillator, port function on RA6 and RA7
-#pragma config WDT = OFF            // Watchdog Timer OFF
+#pragma config WDT = OFF            // Watchdog Timer 
 #pragma config LVP = OFF            // Low Voltage Programming OFF
 #pragma config PBADEN = OFF         // PortB Analog input disabled
 
