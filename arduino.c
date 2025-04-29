@@ -16,7 +16,7 @@ void loop() {
   digitalWrite(redPin, HIGH);
   digitalWrite(yellowPin, LOW);
   digitalWrite(greenPin, LOW);
-  delay(5000); // Red light for 5 seconds
+  delay(5000); // Red light for 5 second
 
   // Yellow light ON (prepare to go green)
   digitalWrite(redPin, LOW);
