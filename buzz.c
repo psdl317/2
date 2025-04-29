@@ -26,7 +26,7 @@ void main(void) {
     TMR1IE = 1;                // Timer1 Interrupt Enable
     TMR1IF = 0;                // Clear interrupt flag
 
-    T1CON = 0x20;              // Timer1 ON, prescaler 1:4, internal clock
+    T1CON = 0x20;              // Timer1 ON, prescaler 1:4, internal cloc
     TMR1L = 0x20;              // Load Timer1 low byte
     TMR1H = 0xD1;              // Load Timer1 high byte
     TMR1ON = 1;                // Turn ON Timer1
