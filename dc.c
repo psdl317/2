@@ -3,7 +3,7 @@
 
 // CONFIG bits setting (if required), else set externally
 
-#define _XTAL_FREQ 8000000  // 8 MHz oscillator frequency
+#define _XTAL_FREQ 8000000  // 8 MHz oscillator frequenc
 
 void timer2Init(void) {
     T2CON = 0b00000100; // Timer2 ON, Prescaler 1:1
