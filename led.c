@@ -1,20 +1,24 @@
-#include <xc.h> 
+#include <xc.h>
 
-void delay(unsigned int time) { 
-    unsigned int i, j; 
-    for (i = 0; i < time; i++) { 
-        for (j = 0; j < 5000; j++) { 
-            // crude delay
-        } 
-    } 
-} 
+// CONFIGURATION BITS (important!)
+#pragma config FOSC = INTOSCIO_EC  // Internal Oscillator, port function on RA6 and RA7
+#pragma config WDT = OFF            // Watchdog Timer OFF
+#pragma config LVP = OFF            // Low Voltage Programming OFF
+#pragma config PBADEN = OFF         // PortB Analog input disabled
 
-void main(void) { 
-    TRISD = 0x00;    
-    LATD = 0xFF;     
-    
-    while (1) { 
-        LATD = ~LATD;  
-        delay(1000);   
-    } 
+// Define internal clock frequency
+#define _XTAL_FREQ 8000000   // 8 MHz (default internal oscillator frequency)
+
+void main(void) {
+    OSCCON = 0x70;   // Set internal oscillator to 8 MHz (SCS bits select internal oscillator)
+
+    TRISD0 = 0;      // Set RD0 as output
+
+    while (1) {
+        LATDbits.LATD0 = 1;  // LED ON
+        __delay_ms(500);     // Delay 500ms
+
+        LATDbits.LATD0 = 0;  // LED OFF
+        __delay_ms(500);     // Delay 500ms
+    }
 }
