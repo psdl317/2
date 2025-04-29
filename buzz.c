@@ -1,6 +1,5 @@
 #include <xc.h> 
-
-
+#include <pic18f4550.h>
 #define Buzzer LATAbits.LATA5
 
 unsigned int count = 0;
